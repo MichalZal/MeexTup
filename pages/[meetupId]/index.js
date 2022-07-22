@@ -8,7 +8,7 @@ const MeetupId = (props) => {
 	return (
 		<Fragment>
 			<Head>
-				<title>Meextup | {props.meetupData.title}</title>
+				<title>Meextup</title>
 				<meta name="description" content={props.meetupData.description} />
 				<link rel="icon" type="image/x-icon" href={props.meetupData.image} />
 			</Head>

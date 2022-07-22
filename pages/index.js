@@ -9,7 +9,7 @@ const HomePage = (props) => {
 	return (
 		<>
 			<Head>
-				<title>Meextup </title>
+				<title>Meextup</title>
 				<meta name="description" content='meetup website created with nextjs' />
 				<meta name="keywords" content="nextjs meetups"/>
 			</Head>
