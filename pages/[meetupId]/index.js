@@ -15,7 +15,6 @@ const MeetupId = (props) => {
 			<MeetupDetail
 				image={props.meetupData.image}
 				id={props.meetupData.id}
-				title={props.meetupData.title}
 				address={props.meetupData.address}
 				description={props.meetupData.description}
 			/>
@@ -57,7 +56,6 @@ export const getStaticProps = async (context) => {
 		props: {
 			meetupData: {
 				id: selectedMeetup._id.toString(),
-				title: selectedMeetup.title,
 				address: selectedMeetup.address,
 				image: selectedMeetup.image,
 				description: selectedMeetup.description
