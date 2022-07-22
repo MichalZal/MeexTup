@@ -9,15 +9,14 @@ const MeetupId = (props) => {
 		<Fragment>
 			<Head>
 				<title>Meextup</title>
-				<meta name="description" content={props.meetupData.description ? props.meetupData.description : ""} />
-				<link rel="icon" type="image/x-icon" href={props.meetupData.image ? props.meetupData.image : ''} />
+				<meta name="description" content='opis' />
 			</Head>
 			<MeetupDetail
-				image={props.meetupData.image ? props.meetupData.image : 'image'}
-				id={props.meetupData.id ? props.meetupData.id : 'id'}
-				title={props.meetupData.title ? props.meetupData.title : 'title'}
-				address={props.meetupData.address ? props.meetupData.address : 'addres	'}
-				description={props.meetupData.description ? props.meetupData.description : 'description'}
+				image={props.meetupData?.image ? props.meetupData.image : 'image'}
+				id={props.meetupData?.id ? props.meetupData.id : 'id'}
+				title={props.meetupData?.title ? props.meetupData.title : 'title'}
+				address={props.meetupData?.address ? props.meetupData.address : 'addres	'}
+				description={props.meetupData?.description ? props.meetupData.description : 'description'}
 			/>
 		</Fragment>
 	);
@@ -56,11 +55,11 @@ export const getStaticProps = async (context) => {
 	return {
 		props: {
 			meetupData: {
-				id: selectedMeetup._id.toString(),
-				title: selectedMeetup.title ? selectedMeetup.title : 'title',
-				address: selectedMeetup.address ? selectedMeetup.address : 'address',
-				image: selectedMeetup.image ? selectedMeetup.image : 'image',
-				description: selectedMeetup.description ? selectedMeetup.description : 'description'
+				id: selectedMeetup?._id.toString(),
+				title: selectedMeetup?.title ? selectedMeetup.title : 'title',
+				address: selectedMeetup?.address ? selectedMeetup.address : 'address',
+				image: selectedMeetup?.image ? selectedMeetup.image : 'image',
+				description: selectedMeetup?.description ? selectedMeetup.description : 'description'
 			},
 		},
 	};
