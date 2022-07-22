@@ -13,10 +13,11 @@ const MeetupId = (props) => {
 				<link rel="icon" type="image/x-icon" href={props.meetupData.image} />
 			</Head>
 			<MeetupDetail
-				image={props.meetupData.image}
-				id={props.meetupData.id}
-				address={props.meetupData.address}
-				description={props.meetupData.description}
+				image={props.meetupData.image ? props.meetupData.image : 'image'}
+				id={props.meetupData.id ? props.meetupData.id : 'id'}
+				title={props.meetupData.title ? props.meetupData.title : 'title'}
+				address={props.meetupData.address ? props.meetupData.address : 'addres	'}
+				description={props.meetupData.description ? props.meetupData.description : 'description'}
 			/>
 		</Fragment>
 	);
@@ -56,9 +57,10 @@ export const getStaticProps = async (context) => {
 		props: {
 			meetupData: {
 				id: selectedMeetup._id.toString(),
-				address: selectedMeetup.address,
-				image: selectedMeetup.image,
-				description: selectedMeetup.description
+				title: selectedMeetup.title ? selectedMeetup.title : 'title',
+				address: selectedMeetup.addres ? selectedMeetup.address : 'address',
+				image: selectedMeetup.image ? selectedMeetup.image : 'image',
+				description: selectedMeetup.description ? selectedMeetup.description : 'description'
 			},
 		},
 	};
