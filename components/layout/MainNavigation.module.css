@@ -54,10 +54,43 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .header a {
+  .header ul {
     display: none;
   }
 
+  .ham {
+    display: flex;
+    width: 46px;
+    height: 35px;
+    /* background-color: rgb(255, 255, 255); */
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
 
+  .bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    display: block;
+  }
+
+  .bar3 {
+    width: 75%;
+  }
 }
+
+.headerUlActive {
+  position: absolute;
+  z-index: 10;
+  display: flex !important;
+  flex-direction: column;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-75%);
+}
+
+
 
